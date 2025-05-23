@@ -7,33 +7,33 @@ const timelineItems = [
   {
     id: 1,
     type: "milestone",
-    title: "Moved to San Francisco",
-    period: "2020",
+    title: "Self-Employment",
+    period: "2025",
     description:
-      "Took a leap of faith and relocated to a new city where I knew no one. Started building a new life and finding my community.",
+      "Quit my job, stopped studying, and went all in on running businesses and startups.",
   },
   {
     id: 2,
-    type: "travel",
-    title: "Backpacking Through Southeast Asia",
-    period: "2019",
+    type: "milestone",
+    title: "Launched Holonomy",
+    period: "2024",
     description:
-      "Spent three months traveling through Thailand, Vietnam, and Cambodia. Experienced different cultures and made friends from around the world.",
+      "Launched my first startup, failed lots and learned lots.",
   },
   {
     id: 3,
     type: "learning",
-    title: "Started Learning Photography",
-    period: "2018",
+    title: "Joined my first startup",
+    period: "2023",
     description:
-      "Bought my first camera and began exploring photography as a creative outlet. Focused on street photography and landscapes.",
+      "Started working at No Sense Entertainment fixing Vending Machines.",
   },
   {
     id: 4,
     type: "milestone",
-    title: "Career Transition",
-    period: "2017",
-    description: "Made a significant career change to pursue work more aligned with my values and interests.",
+    title: "Graduated Highschool",
+    period: "2021",
+    description: "Finished school and moved to Melbourne.",
   },
 ]
 

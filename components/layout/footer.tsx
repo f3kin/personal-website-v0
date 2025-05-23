@@ -12,8 +12,7 @@ export default function Footer() {
               Finlay<span className="text-foreground">Ekins</span>
             </Link>
             <p className="mt-6 text-muted-foreground max-w-md">
-              A personal space where I share my life experiences, thoughts, and adventures. Join me on this journey of
-              exploration and discovery.
+              A personal space to share my projects and writings.
             </p>
           </div>
 
@@ -129,7 +128,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://spotify.com"
+                  href="https://open.spotify.com/user/finlaydekins?si=mr0Vwy4tSdqL4lbt_yQ0fA"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
@@ -180,9 +179,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border/30 mt-12 pt-10 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-muted-foreground text-sm">© {currentYear} Finlay Ekins. All rights reserved.</p>
-          <p className="text-muted-foreground text-sm mt-3 md:mt-0">Made with ♥ and lots of coffee</p>
+        <div className="border-t border-border/30 mt-12 pt-10 flex justify-center">
+          <p className="text-muted-foreground text-sm text-center">© {currentYear} Finlay Ekins. All rights reserved.</p>
         </div>
       </div>
     </footer>

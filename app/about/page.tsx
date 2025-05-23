@@ -19,7 +19,7 @@ export default function AboutPage() {
           <div className="sticky top-24">
             <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-6">
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src="/images/japan.JPEG"
                 alt="Finlay Ekins"
                 fill
                 className="object-cover transition-transform duration-500 hover:scale-105"
@@ -72,7 +72,7 @@ export default function AboutPage() {
                 </svg>
               </a>
               <a
-                href="https://spotify.com"
+                href="https://open.spotify.com/user/finlaydekins?si=mr0Vwy4tSdqL4lbt_yQ0fA"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"

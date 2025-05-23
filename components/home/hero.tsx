@@ -44,7 +44,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted-foreground mb-8"
           >
-            Welcome to my personal space where I share my thoughts, projects, and reflections on life
+            Welcome to my personal space
           </motion.h2>
 
           <motion.div

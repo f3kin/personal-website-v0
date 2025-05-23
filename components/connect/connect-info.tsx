@@ -158,7 +158,7 @@ export default function ConnectInfo() {
                   </svg>
                 </a>
                 <a
-                  href="https://spotify.com"
+                  href="https://open.spotify.com/user/finlaydekins?si=mr0Vwy4tSdqL4lbt_yQ0fA"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
@@ -186,8 +186,8 @@ export default function ConnectInfo() {
           </div>
         </CardContent>
       </Card>
-
-      <div className="rounded-lg overflow-hidden h-[300px] mt-6">
+      {/* Remove or comment out the following div block */}
+      {/* <div className="rounded-lg overflow-hidden h-[300px] mt-6">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d201579.70549579566!2d144.74278335248028!3d-37.84093549337078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646b5d2ba4df7%3A0x4045675218236e0!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1707166918674!5m2!1sen!2sus"
           width="100%"
@@ -199,7 +199,7 @@ export default function ConnectInfo() {
           title="Map showing Melbourne, Australia"
           aria-label="Google Maps showing Melbourne, Australia"
         ></iframe>
-      </div>
+      </div> */}
     </div>
   )
 }

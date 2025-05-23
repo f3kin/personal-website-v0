@@ -6,7 +6,7 @@ import SectionHeading from "@/components/shared/section-heading"
 const exploreItems = [
   {
     title: "About Me",
-    description: "Learn about my story, interests, and life journey",
+    description: "My journey",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ const exploreItems = [
   },
   {
     title: "My Projects",
-    description: "Explore the things I've built and created",
+    description: "Things I've built and created",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,7 @@ const exploreItems = [
   },
   {
     title: "My Writings",
-    description: "Read my thoughts, reflections, and stories",
+    description: "Thoughts and reflections",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

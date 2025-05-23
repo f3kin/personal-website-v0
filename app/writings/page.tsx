@@ -4,13 +4,13 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Writings | Finlay Ekins",
-  description: "My thoughts, reflections, and stories from everyday life.",
+  description: "Thoughts and reflections from my life.",
 }
 
 export default function WritingsPage() {
   return (
     <div className="container mx-auto px-4 py-16 md:py-24">
-      <SectionHeading title="My Writings" subtitle="Thoughts, reflections, and stories from everyday life" />
+      <SectionHeading title="My Writings" subtitle="Thoughts and reflections from life" />
 
       <div className="mt-12">
         <WritingList />
