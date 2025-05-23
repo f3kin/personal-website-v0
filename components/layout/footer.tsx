@@ -154,9 +154,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border/30 mt-12 pt-10 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-border/30 mt-12 pt-10 flex justify-center items-center">
           <p className="text-muted-foreground text-sm">© {currentYear} Finlay Ekins. All rights reserved.</p>
-          <p className="text-muted-foreground text-sm mt-3 md:mt-0">Made with ♥ and lots of coffee</p>
         </div>
       </div>
     </footer>
