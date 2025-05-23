@@ -19,9 +19,9 @@ export default function PersonalStory() {
           and music, which have become important creative outlets in my life.
         </p>
         <p>
-          In 2020, I made a significant life change by moving to a new city where I knew no one. This leap of faith
-          taught me resilience, adaptability, and the joy of building a life from scratch. It's been one of the most
-          challenging yet rewarding chapters of my story.
+          In 2020, I made a significant life change by moving to Melbourne, Australia, where I knew no one. This leap of
+          faith taught me resilience, adaptability, and the joy of building a life from scratch. It's been one of the
+          most challenging yet rewarding chapters of my story.
         </p>
         <p>
           Today, I'm focused on living mindfully, nurturing meaningful relationships, and continuing to explore this

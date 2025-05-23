@@ -26,8 +26,8 @@ export default function ConnectInfo() {
             <div>
               <h3 className="text-lg font-semibold mb-1">Email</h3>
               <p className="text-muted-foreground mb-2">Feel free to email me anytime</p>
-              <a href="mailto:hello@finlayekins.me" className="text-primary hover:underline">
-                hello@finlayekins.me
+              <a href="mailto:ekinsfinlay@gmail.com" className="text-primary hover:underline">
+                ekinsfinlay@gmail.com
               </a>
             </div>
           </div>
@@ -57,7 +57,7 @@ export default function ConnectInfo() {
             <div>
               <h3 className="text-lg font-semibold mb-1">Location</h3>
               <p className="text-muted-foreground mb-2">Currently based in</p>
-              <p>San Francisco, California</p>
+              <p>Melbourne, Australia</p>
             </div>
           </div>
         </CardContent>
@@ -88,7 +88,31 @@ export default function ConnectInfo() {
               <p className="text-muted-foreground mb-2">Connect with me on social media</p>
               <div className="flex gap-4">
                 <a
-                  href="https://instagram.com"
+                  href="https://linkedin.com/in/finlay-ekins"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-linkedin"
+                  >
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect width="4" height="12" x="2" y="9"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
+                <a
+                  href="https://www.instagram.com/finlay_ek/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
@@ -112,7 +136,7 @@ export default function ConnectInfo() {
                   </svg>
                 </a>
                 <a
-                  href="https://twitter.com"
+                  href="https://x.com/f3kin5"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
@@ -165,15 +189,15 @@ export default function ConnectInfo() {
 
       <div className="rounded-lg overflow-hidden h-[300px] mt-6">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555098464!2d-122.50764017948551!3d37.75781499657369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1623252234283!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d201579.70549579566!2d144.74278335248028!3d-37.84093549337078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646b5d2ba4df7%3A0x4045675218236e0!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1707166918674!5m2!1sen!2sus"
           width="100%"
           height="100%"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Map showing San Francisco, California"
-          aria-label="Google Maps showing San Francisco, California"
+          title="Map showing Melbourne, Australia"
+          aria-label="Google Maps showing Melbourne, Australia"
         ></iframe>
       </div>
     </div>

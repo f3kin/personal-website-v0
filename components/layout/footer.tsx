@@ -53,7 +53,33 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="https://instagram.com"
+                  href="https://www.linkedin.com/in/finlayekins"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-linkedin"
+                  >
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect width="4" height="12" x="2" y="9"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/finlay_ek/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
@@ -79,7 +105,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://twitter.com"
+                  href="https://x.com/f3kin5"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
@@ -129,7 +155,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:hello@finlayekins.me"
+                  href="mailto:ekinsfinlay@gmail.com"
                   className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
                 >
                   <svg
@@ -154,8 +180,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border/30 mt-12 pt-10 flex justify-center items-center">
+        <div className="border-t border-border/30 mt-12 pt-10 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">© {currentYear} Finlay Ekins. All rights reserved.</p>
+          <p className="text-muted-foreground text-sm mt-3 md:mt-0">Made with ♥ and lots of coffee</p>
         </div>
       </div>
     </footer>

@@ -1,7 +1,6 @@
 import Image from "next/image"
 import SectionHeading from "@/components/shared/section-heading"
 import PersonalStory from "@/components/about/personal-story"
-import Interests from "@/components/about/interests"
 import LifeJourney from "@/components/about/life-journey"
 import type { Metadata } from "next"
 
@@ -101,7 +100,6 @@ export default function AboutPage() {
 
         <div className="md:col-span-2 space-y-16">
           <PersonalStory />
-          <Interests />
           <LifeJourney />
         </div>
       </div>

@@ -26,8 +26,8 @@ export default function ContactInfo() {
             <div>
               <h3 className="text-lg font-semibold mb-1">Email</h3>
               <p className="text-muted-foreground mb-2">Feel free to email me anytime</p>
-              <a href="mailto:hello@johndoe.dev" className="text-primary hover:underline">
-                hello@johndoe.dev
+              <a href="mailto:ekinsfinlay@gmail.com" className="text-primary hover:underline">
+                ekinsfinlay@gmail.com
               </a>
             </div>
           </div>
@@ -57,7 +57,7 @@ export default function ContactInfo() {
             <div>
               <h3 className="text-lg font-semibold mb-1">Location</h3>
               <p className="text-muted-foreground mb-2">Currently based in</p>
-              <p>San Francisco, California</p>
+              <p>Melbourne, Australia</p>
             </div>
           </div>
         </CardContent>
@@ -164,15 +164,15 @@ export default function ContactInfo() {
 
       <div className="rounded-lg overflow-hidden h-[300px] mt-6">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555098464!2d-122.50764017948551!3d37.75781499657369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1623252234283!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d201879.9554614676!2d144.7932321!3d-37.8142176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646b5d2ba4df7%3A0x4045675218ccd90!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1623252234283!5m2!1sen!2sus"
           width="100%"
           height="100%"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Map showing San Francisco, California"
-          aria-label="Google Maps showing San Francisco, California"
+          title="Map showing Melbourne, Australia"
+          aria-label="Google Maps showing Melbourne, Australia"
         ></iframe>
       </div>
     </div>
