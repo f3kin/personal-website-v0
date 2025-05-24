@@ -64,7 +64,7 @@ export default function Home() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col gap-32 pb-20">
+      <div className="relative z-10 flex flex-col gap-8 sm:gap-24 md:gap-32 pb-20">
         <Hero />
         <ExploreSection />
         <ConnectCTA />

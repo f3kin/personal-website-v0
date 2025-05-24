@@ -86,7 +86,7 @@ export default function ConnectInfo() {
             <div>
               <h3 className="text-lg font-semibold mb-1">Social</h3>
               <p className="text-muted-foreground mb-2">Connect with me on social media</p>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-3 sm:gap-4">
                 <a
                   href="https://linkedin.com/in/finlay-ekins"
                   target="_blank"

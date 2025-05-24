@@ -72,16 +72,16 @@ export default function Navbar() {
         </nav>
 
         {/* Mobile Navigation */}
-        <div className="md:hidden flex items-center justify-center">
-          <div className="flex items-center space-x-1">
+        <div className="md:hidden flex items-center justify-between w-full">
+          <div className="flex items-center space-x-2">
             {navLinks.map(
               (link, index) =>
-                index < 3 && (
+                index < 2 && (
                   <Link
                     key={link.href}
                     href={link.href}
                     className={cn(
-                      "px-3 py-2 text-xs font-medium transition-colors relative",
+                      "px-2 py-2 text-sm font-medium transition-colors relative",
                       pathname === link.href ? "text-primary" : "text-foreground/70 hover:text-foreground",
                     )}
                   >
@@ -89,36 +89,37 @@ export default function Navbar() {
                     {pathname === link.href && (
                       <motion.span
                         layoutId="navbar-indicator-mobile"
-                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full mx-3"
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full mx-2"
                       />
                     )}
                   </Link>
                 ),
             )}
           </div>
-          <Button
-            variant="ghost"
-            size="icon"
-            aria-label="Toggle Menu"
-            className="ml-2"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-5 h-5"
+          <div className="flex items-center space-x-2">
+            <ModeToggle />
+            <Button
+              variant="ghost"
+              size="icon"
+              aria-label="Toggle Menu"
+              onClick={() => setIsOpen(!isOpen)}
             >
-              {isOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              )}
-            </svg>
-          </Button>
-          <ModeToggle />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-5 h-5"
+              >
+                {isOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                )}
+              </svg>
+            </Button>
+          </div>
         </div>
       </div>
 
