@@ -1,44 +1,26 @@
 "use client"
 
-import { useState } from "react"
+import { useMemo, useState } from "react"
 import WritingCard from "./writing-card"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import type { MediumPost } from "@/lib/medium"
 
-// Sample writing posts data
-const allPosts = [
-  {
-    id: 1,
-    title: "How to Make Decisions",
-    excerpt: "What I've learnt about decision-making in developing an action-bias",
-    date: "2025-01-30",
-    readTime: "5 min read",
-    slug: "https://medium.com/@f3kin/how-to-make-decisions-b658d9777984",
-    image: "/images/writings/decision-making.jpg",
-    category: "Self-Improvement",
-  },
-  {
-    id: 2,
-    title: "How I architect my life",
-    excerpt: "How I avoid perfectionism and achieve my goals",
-    date: "2025-01-07",
-    readTime: "8 min read",
-    slug: "https://medium.com/@f3kin/how-steve-jobs-and-notion-are-shaping-my-2025-goals-277826aa2bc3",
-    image: "/images/writings/steve-jobs.jpg",
-    category: "Books",
-  }
-]
+interface WritingListProps {
+  initialPosts: MediumPost[]
+}
 
-// Extract all unique categories
-const categories = Array.from(new Set(allPosts.map((post) => post.category)))
-
-export default function WritingList() {
+export default function WritingList({ initialPosts }: WritingListProps) {
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedCategory, setSelectedCategory] = useState<string>("all")
   const [sortBy, setSortBy] = useState<string>("newest")
 
-  // Filter and sort posts
-  let filteredPosts = allPosts.filter((post) => {
+  const categories = useMemo(
+    () => Array.from(new Set(initialPosts.map((post) => post.category))),
+    [initialPosts],
+  )
+
+  let filteredPosts = initialPosts.filter((post) => {
     const matchesSearch =
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       post.excerpt.toLowerCase().includes(searchQuery.toLowerCase())
@@ -48,7 +30,6 @@ export default function WritingList() {
     return matchesSearch && matchesCategory
   })
 
-  // Sort posts
   filteredPosts = [...filteredPosts].sort((a, b) => {
     const dateA = new Date(a.date).getTime()
     const dateB = new Date(b.date).getTime()

@@ -46,7 +46,6 @@ export default function ConnectForm() {
 
     // Simulate form submission
     setTimeout(() => {
-      console.log(values)
       setIsSubmitting(false)
       form.reset()
 

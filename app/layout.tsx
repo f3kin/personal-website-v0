@@ -18,12 +18,13 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://finlayekins.com'),
   title: "Finlay Ekins | Personal Space",
   description: "A personal website showcasing my thoughts, projects, and reflections.",
   openGraph: {
     title: "Finlay Ekins | Personal Space",
     description: "A personal website showcasing my thoughts, projects, and reflections.",
-    url: "https://finlayekins.me",
+    url: "https://finlayekins.com",
     siteName: "Finlay Ekins",
     images: [
       {
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({

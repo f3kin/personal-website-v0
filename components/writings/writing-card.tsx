@@ -15,6 +15,7 @@ interface WritingPost {
   readTime: string
   slug: string
   image: string
+  category?: string
 }
 
 interface WritingCardProps {

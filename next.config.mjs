@@ -8,6 +8,11 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    remotePatterns: [
+      { protocol: 'https', hostname: 'miro.medium.com' },
+      { protocol: 'https', hostname: 'cdn-images-1.medium.com' },
+      { protocol: 'https', hostname: 'images.unsplash.com' },
+    ],
   },
 }
 
