@@ -10,7 +10,7 @@ const timelineItems = [
     title: "Self-Employment",
     period: "2025",
     description:
-      "Quit my job, stopped studying, and went all in on running businesses and startups.",
+      "Quit my job, stopped studying, and went all in on running Hourglass Digital.",
   },
   {
     id: 2,

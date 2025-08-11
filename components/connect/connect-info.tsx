@@ -26,8 +26,8 @@ export default function ConnectInfo() {
             <div>
               <h3 className="text-lg font-semibold mb-1">Email</h3>
               <p className="text-muted-foreground mb-2">Feel free to email me anytime</p>
-              <a href="mailto:ekinsfinlay@gmail.com" className="text-primary hover:underline">
-                ekinsfinlay@gmail.com
+              <a href="mailto:finlay@hourglassdigital.com.au" className="text-primary hover:underline">
+                finlay@hourglassdigital.com.au
               </a>
             </div>
           </div>

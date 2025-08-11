@@ -155,7 +155,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="mailto:ekinsfinlay@gmail.com"
+                    href="mailto:finlay@hourglassdigital.com.au"
                     className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
                   >
                     <svg
