@@ -31,7 +31,7 @@ export default function WritingCard({ post }: WritingCardProps) {
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
     >
-      <Link href={`/writings/${post.slug}`}>
+      <Link href={`${post.slug}`} target="_blank">
         <Card
           className="overflow-hidden h-full flex flex-col transition-all duration-300 hover:shadow-lg"
           onMouseEnter={() => setIsHovered(true)}

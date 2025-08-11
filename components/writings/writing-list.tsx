@@ -13,7 +13,7 @@ const allPosts = [
     excerpt: "What I've learnt about decision-making in developing an action-bias",
     date: "2025-01-30",
     readTime: "5 min read",
-    slug: "decision making frameworks for life",
+    slug: "https://medium.com/@f3kin/how-to-make-decisions-b658d9777984",
     image: "/images/writings/decision-making.jpg",
     category: "Self-Improvement",
   },
@@ -23,7 +23,7 @@ const allPosts = [
     excerpt: "How I avoid perfectionism and achieve my goals",
     date: "2025-01-07",
     readTime: "8 min read",
-    slug: "steve-jobs-notion",
+    slug: "https://medium.com/@f3kin/how-steve-jobs-and-notion-are-shaping-my-2025-goals-277826aa2bc3",
     image: "/images/writings/steve-jobs.jpg",
     category: "Books",
   }
