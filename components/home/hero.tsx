@@ -26,7 +26,7 @@ export default function Hero() {
   if (!mounted) return null
 
   return (
-    <section className="relative pt-20 pb-20 md:pt-48 md:pb-48 overflow-hidden">
+    <section className="relative pt-20 pb-8 md:pt-48 md:pb-12 overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

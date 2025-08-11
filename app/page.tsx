@@ -4,7 +4,6 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import Hero from "@/components/home/hero"
 import ExploreSection from "@/components/home/explore-section"
-import ConnectCTA from "@/components/home/connect-cta"
 
 export default function Home() {
   const [mounted, setMounted] = useState(false)
@@ -67,7 +66,6 @@ export default function Home() {
       <div className="relative z-10 flex flex-col gap-8 sm:gap-24 md:gap-32 pb-20">
         <Hero />
         <ExploreSection />
-        <ConnectCTA />
       </div>
     </>
   )
@@ -81,19 +79,19 @@ function Particles() {
           key={i}
           className="absolute w-1.5 h-1.5 rounded-full bg-primary/40"
           initial={{
-            x: Math.random() * 100 + "%",
-            y: Math.random() * 100 + "%",
+            x: `${Math.random() * 100}vw`,
+            y: `${Math.random() * 100}vh`,
             scale: Math.random() * 0.5 + 0.5,
           }}
           animate={{
-            y: [Math.random() * 100 + "%", Math.random() * 100 + "%", Math.random() * 100 + "%"],
-            x: [Math.random() * 100 + "%", Math.random() * 100 + "%", Math.random() * 100 + "%"],
+            y: `${Math.random() * 100}vh`,
+            x: `${Math.random() * 100}vw`,
             opacity: [0.2, 0.6, 0.2],
           }}
           transition={{
-            duration: Math.random() * 25 + 25,
+            duration: Math.random() * 30 + 40,
             repeat: Number.POSITIVE_INFINITY,
-            ease: "linear",
+            ease: "easeInOut",
           }}
         />
       ))}
