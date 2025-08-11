@@ -21,18 +21,14 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://finlayekins.com'),
   title: "Finlay Ekins | Personal Space",
   description: "A personal website showcasing my thoughts, projects, and reflections.",
+  icons: { icon: "/favicon.png" },
   openGraph: {
     title: "Finlay Ekins | Personal Space",
     description: "A personal website showcasing my thoughts, projects, and reflections.",
     url: "https://finlayekins.com",
     siteName: "Finlay Ekins",
     images: [
-      {
-        url: "/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Finlay Ekins Personal Website",
-      },
+      { url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Finlay Ekins Personal Website" },
     ],
     locale: "en_US",
     type: "website",
@@ -40,11 +36,7 @@ export const metadata: Metadata = {
   generator: 'v0.dev'
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${poppins.variable} font-sans`}>
