@@ -4,6 +4,7 @@ import PersonalStory from "@/components/about/personal-story"
 import LifeJourney from "@/components/about/life-journey"
 import type { Metadata } from "next"
 import { SOCIALS } from "@/lib/socials"
+import portrait from "@/public/images/japan-1600.webp"
 
 export const metadata: Metadata = {
   title: "About | Finlay Ekins",
@@ -20,11 +21,13 @@ export default function AboutPage() {
           <div className="sticky top-24">
             <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-6">
               <Image
-                src="/images/japan.JPEG"
+                src={portrait}
                 alt="Finlay Ekins"
                 fill
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover transition-transform duration-500 hover:scale-105"
                 priority
+                placeholder="blur"
               />
             </div>
             <div className="flex gap-4 justify-center mt-6">

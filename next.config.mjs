@@ -7,7 +7,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    unoptimized: false,
     remotePatterns: [
       { protocol: 'https', hostname: 'miro.medium.com' },
       { protocol: 'https', hostname: 'cdn-images-1.medium.com' },
