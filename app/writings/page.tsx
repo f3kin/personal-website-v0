@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   description: "Thoughts and reflections from my life.",
 }
 
+// Revalidate the page every hour (3600 seconds)
+export const revalidate = 36000
+
 export default async function WritingsPage() {
   const posts = await getMediumPosts("f3kin")
 
