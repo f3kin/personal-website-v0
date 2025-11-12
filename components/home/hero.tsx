@@ -53,12 +53,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button asChild size="lg" className="rounded-full">
-              <Link href="/about">Learn About Me</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="rounded-full">
-              <Link href="/connect">Say Hello</Link>
-            </Button>
+
           </motion.div>
         </motion.div>
       </div>

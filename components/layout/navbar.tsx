@@ -10,10 +10,10 @@ import { motion } from "framer-motion"
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/projects", label: "Projects" },
+  // { href: "/about", label: "About" },
+  // { href: "/projects", label: "Projects" },
   { href: "/writings", label: "Writings" },
-  { href: "/connect", label: "Connect" },
+  // { href: "/connect", label: "Connect" },
 ]
 
 export default function Navbar() {

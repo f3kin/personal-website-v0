@@ -18,36 +18,6 @@ export default function Footer() {
           </div>
 
           <div className="grid grid-cols-2 gap-8 md:col-span-2">
-            <div>
-              <h3 className="text-lg font-semibold mb-6">Navigation</h3>
-              <ul className="space-y-3">
-                <li>
-                  <Link href="/" className="text-muted-foreground hover:text-primary transition-colors">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/projects" className="text-muted-foreground hover:text-primary transition-colors">
-                    Projects
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/writings" className="text-muted-foreground hover:text-primary transition-colors">
-                    Writings
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/connect" className="text-muted-foreground hover:text-primary transition-colors">
-                    Connect
-                  </Link>
-                </li>
-              </ul>
-            </div>
 
             <div>
               <h3 className="text-lg font-semibold mb-6">Connect</h3>

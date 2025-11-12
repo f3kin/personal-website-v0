@@ -1,6 +1,6 @@
 import SectionHeading from "@/components/shared/section-heading"
-import ConnectForm from "@/components/connect/connect-form"
-import ConnectInfo from "@/components/connect/connect-info"
+import ConnectForm from "@/components/_connect/connect-form"
+import ConnectInfo from "@/components/_connect/connect-info"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
