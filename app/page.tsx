@@ -25,8 +25,6 @@ export default function Home() {
 
   if (!mounted) return null
 
-  const lastUpdated = new Date().toISOString().split("T")[0]
-
   return (
     <>
       {/* Full-page gradient background that extends behind the header */}
@@ -65,7 +63,7 @@ export default function Home() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col gap-4 sm:gap-8 md:gap-10 pb-8">
+      <div className="relative z-10 flex flex-col gap-6 sm:gap-12 md:gap-16 pb-4">
         <Hero />
         <ExploreSection />
       </div>

@@ -26,7 +26,7 @@ export default function Hero() {
   if (!mounted) return null
 
   return (
-    <section className="relative pt-20 pb-8 md:pt-48 md:pb-12 overflow-hidden">
+    <section className="relative pt-24 pb-6 md:pt-40 md:pb-10 overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,7 +34,7 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto text-center"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-3 sm:mb-5">
             Hi, I'm <span className="text-primary">Finlay</span>
           </h1>
 
@@ -42,7 +42,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8"
+            className="text-base sm:text-lg md:text-2xl text-muted-foreground mb-4 sm:mb-6"
           >
           </motion.h2>
 
@@ -52,7 +52,6 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-
           </motion.div>
         </motion.div>
       </div>
