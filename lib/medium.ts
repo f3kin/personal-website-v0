@@ -5,7 +5,6 @@ export interface MediumPost {
   title: string
   excerpt: string
   date: string
-  readTime: string
   slug: string
   image: string
   category: string
@@ -25,7 +24,7 @@ interface MediumFeedItem {
 
 const parser: Parser<unknown, MediumFeedItem> = new Parser()
 
-export async function getMediumPosts(username: string = "f3kin"): Promise<MediumPost[]> {
+export async function getMediumPosts(username: string = "finlayekins"): Promise<MediumPost[]> {
   const feedUrl = `https://medium.com/feed/@${username}`
 
   const feed = await parser.parseURL(feedUrl)
@@ -33,7 +32,7 @@ export async function getMediumPosts(username: string = "f3kin"): Promise<Medium
   return (feed.items || []).map((item: MediumFeedItem, index: number): MediumPost => {
     const contentHtml = (item["content:encoded"] as string | undefined) || item.content || ""
 
-    // Use the first non-empty line from contentSnippet (fallback to stripped HTML) and cap at 10 words
+    // Use the first non-empty line from contentSnippet (fallback to stripped HTML) and cap at 7 words
     const baseText = (item.contentSnippet && item.contentSnippet.trim()) || stripHtml(contentHtml)
     const firstLine = getFirstNonEmptyLine(baseText)
     const excerpt = truncateWords(firstLine, 7)
@@ -45,19 +44,11 @@ export async function getMediumPosts(username: string = "f3kin"): Promise<Medium
       title: item.title || "Untitled",
       excerpt,
       date: new Date(iso).toISOString().split("T")[0],
-      readTime: estimateReadTime(contentHtml || excerpt),
       slug: item.link || "#",
       image: extractImage(contentHtml) || "/placeholder.jpg",
       category: (item.categories && item.categories[0]) || "General",
     }
   })
-}
-
-function estimateReadTime(content: string): string {
-  const text = stripHtml(content)
-  const words = text.trim().split(/\s+/).length
-  const minutes = Math.max(1, Math.ceil(words / 200))
-  return `${minutes} min read`
 }
 
 function extractImage(html: string): string | null {

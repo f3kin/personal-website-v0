@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export const revalidate = 36000
 
 export default async function WritingsPage() {
-  const posts = await getMediumPosts("f3kin")
+  const posts = await getMediumPosts("finlayekins")
 
   return (
     <div className="container mx-auto px-4 py-16 md:py-24">

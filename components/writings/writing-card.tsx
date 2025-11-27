@@ -12,7 +12,6 @@ interface WritingPost {
   title: string
   excerpt: string
   date: string
-  readTime: string
   slug: string
   image: string
   category?: string
@@ -24,6 +23,9 @@ interface WritingCardProps {
 
 export default function WritingCard({ post }: WritingCardProps) {
   const [isHovered, setIsHovered] = useState(false)
+  const [imageSrc, setImageSrc] = useState<string>(post.image || "/placeholder.svg")
+
+  const isExternal = /^https?:\/\//i.test(imageSrc)
 
   return (
     <motion.div
@@ -40,9 +42,12 @@ export default function WritingCard({ post }: WritingCardProps) {
         >
           <div className="relative aspect-video overflow-hidden">
             <Image
-              src={post.image || "/placeholder.svg"}
+              src={imageSrc || "/placeholder.svg"}
               alt={post.title}
               fill
+              unoptimized={isExternal}
+              referrerPolicy="no-referrer"
+              onError={() => setImageSrc("/placeholder.jpg")}
               className={`object-cover transition-transform duration-500 ${isHovered ? "scale-105" : "scale-100"}`}
             />
           </div>
@@ -50,8 +55,6 @@ export default function WritingCard({ post }: WritingCardProps) {
           <CardContent className="flex flex-col flex-grow p-6">
             <div className="flex items-center text-sm text-muted-foreground mb-3">
               <time dateTime={post.date}>{formatDate(post.date)}</time>
-              <span className="mx-2">•</span>
-              <span>{post.readTime}</span>
             </div>
 
             <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{post.title}</h3>
