@@ -22,7 +22,7 @@ interface WritingCardProps {
 }
 
 export default function WritingCard({ post }: WritingCardProps) {
-  const [isHovered, setIsHovered] = useState(false)
+  const [loaded, setLoaded] = useState(false)
   const [imageSrc, setImageSrc] = useState<string>(post.image || "/placeholder.svg")
 
   const isExternal = /^https?:\/\//i.test(imageSrc)
@@ -35,20 +35,21 @@ export default function WritingCard({ post }: WritingCardProps) {
       viewport={{ once: true }}
     >
       <Link href={`${post.slug}`} target="_blank">
-        <Card
-          className="overflow-hidden h-full flex flex-col transition-all duration-300 hover:shadow-lg"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          <div className="relative aspect-video overflow-hidden">
+        <Card className="overflow-hidden h-full flex flex-col transition-shadow duration-300 hover:shadow-lg group">
+          <div className="relative aspect-video overflow-hidden bg-muted/40">
+            {/* Fade-in image to prevent white flash */}
             <Image
               src={imageSrc || "/placeholder.svg"}
               alt={post.title}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               unoptimized={isExternal}
               referrerPolicy="no-referrer"
+              onLoad={() => setLoaded(true)}
               onError={() => setImageSrc("/placeholder.jpg")}
-              className={`object-cover transition-transform duration-500 ${isHovered ? "scale-105" : "scale-100"}`}
+              className={`object-cover transition-opacity duration-300 ease-out will-change-opacity group-hover:scale-[1.02] ${
+                loaded ? "opacity-100" : "opacity-0"
+              }`}
             />
           </div>
 

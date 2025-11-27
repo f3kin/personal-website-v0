@@ -39,13 +39,16 @@ export async function getMediumPosts(username: string = "finlayekins"): Promise<
 
     const iso = item.isoDate || item.pubDate || new Date().toISOString()
 
+    const rawImage = extractImage(contentHtml) || "/placeholder.jpg"
+    const image = optimizeMediumImageUrl(rawImage)
+
     return {
       id: index + 1,
       title: item.title || "Untitled",
       excerpt,
       date: new Date(iso).toISOString().split("T")[0],
       slug: item.link || "#",
-      image: extractImage(contentHtml) || "/placeholder.jpg",
+      image,
       category: (item.categories && item.categories[0]) || "General",
     }
   })
@@ -55,6 +58,15 @@ function extractImage(html: string): string | null {
   if (!html) return null
   const match = html.match(/<img[^>]+src=["']([^"'>]+)["'][^>]*>/i)
   return match ? match[1] : null
+}
+
+function optimizeMediumImageUrl(url: string): string {
+  try {
+    // Medium CDN pattern often contains /max/{size}/ — request a smaller size for faster loads
+    return url.replace(/\/max\/(\d+)\//, "/max/1024/")
+  } catch {
+    return url
+  }
 }
 
 function getFirstNonEmptyLine(text: string): string {
