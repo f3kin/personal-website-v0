@@ -5,7 +5,6 @@ import { getMediumPosts } from "@/lib/medium"
 
 export const metadata: Metadata = {
   title: "Writings | Finlay Ekins",
-  description: "Thoughts and reflections from my life.",
 }
 
 // Revalidate the page every hour (3600 seconds)
@@ -16,7 +15,7 @@ export default async function WritingsPage() {
 
   return (
     <div className="container mx-auto px-4 py-16 md:py-24">
-      <SectionHeading title="My Writings" subtitle="Thoughts and reflections from life" />
+      <SectionHeading title="My Writings" />
 
       <div className="mt-12">
         <WritingList initialPosts={posts} />
