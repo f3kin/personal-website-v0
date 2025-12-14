@@ -1,9 +1,8 @@
 "use client"
 
-import { useMemo, useState } from "react"
+import { useState } from "react"
 import WritingCard from "./writing-card"
 import { Input } from "@/components/ui/input"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import type { MediumPost } from "@/lib/medium"
 
 interface WritingListProps {
@@ -12,75 +11,28 @@ interface WritingListProps {
 
 export default function WritingList({ initialPosts }: WritingListProps) {
   const [searchQuery, setSearchQuery] = useState("")
-  const [selectedCategory, setSelectedCategory] = useState<string>("all")
-  const [sortBy, setSortBy] = useState<string>("newest")
-
-  const categories = useMemo(
-    () => Array.from(new Set(initialPosts.map((post) => post.category))),
-    [initialPosts],
-  )
 
   let filteredPosts = initialPosts.filter((post) => {
     const matchesSearch =
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       post.excerpt.toLowerCase().includes(searchQuery.toLowerCase())
-
-    const matchesCategory = selectedCategory === "all" || post.category === selectedCategory
-
-    return matchesSearch && matchesCategory
+    return matchesSearch
   })
 
-  filteredPosts = [...filteredPosts].sort((a, b) => {
-    const dateA = new Date(a.date).getTime()
-    const dateB = new Date(b.date).getTime()
-
-    if (sortBy === "newest") {
-      return dateB - dateA
-    } else if (sortBy === "oldest") {
-      return dateA - dateB
-    } else {
-      return 0
-    }
-  })
+  // Keep original order from the feed; no category or sort controls
 
   return (
     <div>
-      {/* Search, filter, and sort */}
+      {/* Search */}
       <div className="mb-8 space-y-4">
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex">
           <Input
             type="text"
-            placeholder="Search writings..."
+            placeholder="i'm looking for..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="flex-1"
+            className="w-full"
           />
-
-          <div className="flex gap-2">
-            <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-              <SelectTrigger className="w-[180px]">
-                <SelectValue placeholder="Category" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All Categories</SelectItem>
-                {categories.map((category) => (
-                  <SelectItem key={category} value={category}>
-                    {category}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-
-            <Select value={sortBy} onValueChange={setSortBy}>
-              <SelectTrigger className="w-[150px]">
-                <SelectValue placeholder="Sort by" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="newest">Newest First</SelectItem>
-                <SelectItem value="oldest">Oldest First</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
         </div>
       </div>
 
