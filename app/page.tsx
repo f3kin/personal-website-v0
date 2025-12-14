@@ -58,12 +58,10 @@ export default function Home() {
           transition={{ type: "spring", damping: 60, stiffness: 80 }}
         />
 
-        {/* Animated particles */}
-        <Particles />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col gap-6 sm:gap-12 md:gap-16 pb-4">
+      <div className="relative z-10 flex flex-col gap-6 sm:gap-12 md:gap-16">
         <Hero />
         <ExploreSection />
       </div>
@@ -71,30 +69,3 @@ export default function Home() {
   )
 }
 
-function Particles() {
-  return (
-    <div className="absolute inset-0 overflow-hidden">
-      {Array.from({ length: 25 }).map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-1.5 h-1.5 rounded-full bg-primary/40"
-          initial={{
-            x: `${Math.random() * 100}vw`,
-            y: `${Math.random() * 100}vh`,
-            scale: Math.random() * 0.5 + 0.5,
-          }}
-          animate={{
-            y: `${Math.random() * 100}vh`,
-            x: `${Math.random() * 100}vw`,
-            opacity: [0.2, 0.6, 0.2],
-          }}
-          transition={{
-            duration: Math.random() * 30 + 40,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-          }}
-        />
-      ))}
-    </div>
-  )
-}

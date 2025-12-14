@@ -1,5 +1,5 @@
 import SectionHeading from "@/components/shared/section-heading"
-import ProjectGrid from "@/components/projects/project-grid"
+import ProjectGrid from "@/components/_projects/project-grid"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
