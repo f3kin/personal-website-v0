@@ -3,7 +3,6 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { formatDate } from "@/lib/utils"
 
@@ -28,12 +27,7 @@ export default function WritingCard({ post }: WritingCardProps) {
   const isExternal = /^https?:\/\//i.test(imageSrc)
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: true }}
-    >
+    <div>
       <Link href={`${post.slug}`} target="_blank">
         <Card className="overflow-hidden h-full flex flex-col transition-shadow duration-300 hover:shadow-lg group">
           <div className="relative aspect-video overflow-hidden bg-muted/40">
@@ -64,6 +58,6 @@ export default function WritingCard({ post }: WritingCardProps) {
           </CardContent>
         </Card>
       </Link>
-    </motion.div>
+    </div>
   )
 }
