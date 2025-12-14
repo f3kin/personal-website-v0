@@ -10,25 +10,12 @@ import { motion } from "framer-motion"
 
 const navLinks = [
   { href: "/", label: "Home" },
-  // { href: "/about", label: "About" },
-  // { href: "/projects", label: "Projects" },
   { href: "/writings", label: "Writings" },
-  // { href: "/connect", label: "Connect" },
 ]
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
 
   useEffect(() => {
     // Close mobile menu when route changes
@@ -38,8 +25,10 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-300",
-        scrolled ? "bg-background/30 backdrop-blur-sm shadow-sm py-4" : "bg-transparent py-6",
+        // Non-fixed header: scrolls with the page
+        "w-full transition-all duration-300",
+        // Consistent style; no scroll-based opacity change
+        "bg-transparent py-6",
       )}
     >
       <div className="container mx-auto px-4">
