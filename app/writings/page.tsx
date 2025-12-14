@@ -2,7 +2,6 @@ import SectionHeading from "@/components/shared/section-heading"
 import WritingList from "@/components/writings/writing-list"
 import type { Metadata } from "next"
 import { getMediumPosts } from "@/lib/medium"
-import BackgroundEffects from "@/components/ui/background-effects"
 import PageContent from "@/components/layout/page-content"
 
 export const metadata: Metadata = {
@@ -16,14 +15,11 @@ export default async function WritingsPage() {
   const posts = await getMediumPosts("finlayekins")
 
   return (
-    <>
-      <BackgroundEffects />
-      <PageContent className="container mx-auto px-4 py-16 md:py-24">
-        <SectionHeading title="My Writings" />
-        <div className="mt-12">
-          <WritingList initialPosts={posts} />
-        </div>
-      </PageContent>
-    </>
+    <PageContent className="container mx-auto px-4 py-16 md:py-24">
+      <SectionHeading title="My Writings" />
+      <div className="mt-12">
+        <WritingList initialPosts={posts} />
+      </div>
+    </PageContent>
   )
 }
