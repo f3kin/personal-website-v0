@@ -37,10 +37,16 @@ export const metadata: Metadata = {
   generator: 'v0.dev'
 }
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+} as const
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${poppins.variable} font-sans`}>
+    <html lang="en" suppressHydrationWarning className="h-full">
+      <body className={`${inter.variable} ${poppins.variable} font-sans min-h-[100dvh]`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <div className="flex min-h-screen flex-col">
             <Navbar />
