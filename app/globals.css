@@ -54,8 +54,7 @@
     @apply border-border;
   }
   html, body {
-    min-height: 100vh;
-    min-height: 100dvh; /* iOS dynamic viewport */
+    min-height: 100svh;
     background-color: hsl(var(--background));
     background-image: linear-gradient(
       to bottom right,

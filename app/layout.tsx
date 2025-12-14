@@ -20,21 +20,19 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL(LINKS.site.base),
-  title: "Finlay Ekins | Personal Space",
-  description: "A personal website showcasing my thoughts, projects, and reflections.",
+  title: "Finlay Ekins",
   icons: { icon: "/favicon.png" },
   openGraph: {
-    title: "Finlay Ekins | Personal Space",
-    description: "A personal website showcasing my thoughts, projects, and reflections.",
+    title: "Finlay Ekins",
+    description: "a personal website",
     url: LINKS.site.base,
     siteName: "Finlay Ekins",
     images: [
       { url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Finlay Ekins Personal Website" },
     ],
-    locale: "en_US",
+    locale: "en-AU",
     type: "website",
   },
-  generator: 'v0.dev'
 }
 
 export const viewport = {
@@ -45,12 +43,14 @@ export const viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning className="h-full">
-      <body className={`${inter.variable} ${poppins.variable} font-sans min-h-[100dvh]`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.variable} ${poppins.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <div className="flex min-h-screen flex-col">
+          <div className="flex min-h-[100svh] flex-col bg-transparent">
             <Navbar />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1 bg-transparent">
+              {children}
+            </main>
             <Footer />
           </div>
         </ThemeProvider>
