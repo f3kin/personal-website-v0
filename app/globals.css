@@ -54,7 +54,7 @@
     @apply border-border;
   }
   html, body {
-    min-height: 100svh;
+    min-height: 100%;
     background-color: hsl(var(--background));
     background-image: linear-gradient(
       to bottom right,
@@ -65,6 +65,16 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
+  }
+  @supports (-webkit-touch-callout: none) {
+    html, body {
+      min-height: -webkit-fill-available;
+    }
+  }
+  @supports (height: 100dvh) {
+    html, body {
+      min-height: 100dvh;
+    }
   }
   body {
     @apply text-foreground;

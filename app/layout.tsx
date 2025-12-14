@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(LINKS.site.base),
   title: "Finlay Ekins",
   icons: { icon: "/favicon.png" },
+  themeColor: "#0f172a",
   openGraph: {
     title: "Finlay Ekins",
     description: "a personal website",
@@ -46,7 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${poppins.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <div className="flex min-h-[100svh] flex-col bg-transparent">
+          <div className="flex min-h-[100svh] min-h-[100dvh] md:min-h-screen flex-col bg-transparent">
             <Navbar />
             <main className="flex-1 bg-transparent">
               {children}
