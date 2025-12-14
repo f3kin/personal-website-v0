@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { LINKS } from "@/lib/links"
 
 export default function ExploreSection() {
   return (
@@ -7,10 +8,37 @@ export default function ExploreSection() {
         <div className="flex flex-col items-center justify-center gap-3 text-center">
           <div className="space-y-3">
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-              I love reading books and writing about my experiences.
+              I love reading{" "}
+              <Link
+                href={LINKS.content.books}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4"
+              >
+                books
+              </Link>
+              , and{" "}
+              <Link
+                href={LINKS.content.writing}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4"
+              >
+                writing
+              </Link>{" "}
+              about my experiences.
             </p>
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-              I spend my time running Hourglass Digital, an AI consultancy.
+              I spend my time running{" "}
+              <Link
+                href={LINKS.company.hourglassDigital}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4"
+              >
+                Hourglass Digital
+              </Link>
+              , an AI consultancy.
             </p>
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
               I'm a big fan of surfing, basketball, and philosophy.

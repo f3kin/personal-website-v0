@@ -5,6 +5,7 @@ import "./globals.css"
 import Navbar from "@/components/layout/navbar"
 import Footer from "@/components/layout/footer"
 import { ThemeProvider } from "@/components/theme-provider"
+import { LINKS } from "@/lib/links"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,14 +19,14 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://finlayekins.com'),
+  metadataBase: new URL(LINKS.site.base),
   title: "Finlay Ekins | Personal Space",
   description: "A personal website showcasing my thoughts, projects, and reflections.",
   icons: { icon: "/favicon.png" },
   openGraph: {
     title: "Finlay Ekins | Personal Space",
     description: "A personal website showcasing my thoughts, projects, and reflections.",
-    url: "https://finlayekins.com",
+    url: LINKS.site.base,
     siteName: "Finlay Ekins",
     images: [
       { url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Finlay Ekins Personal Website" },
