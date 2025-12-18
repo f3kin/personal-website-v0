@@ -5,6 +5,7 @@ import "./globals.css"
 import Navbar from "@/components/layout/navbar"
 import Footer from "@/components/layout/footer"
 import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeColor } from "@/components/theme-color"
 import { LINKS } from "@/lib/links"
 
 const inter = Inter({
@@ -39,7 +40,6 @@ export const viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#EEF3FC",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -47,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${poppins.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+          <ThemeColor />
           <div className="flex min-h-[100svh] min-h-[100dvh] md:min-h-screen flex-col bg-transparent">
             <Navbar />
             <main className="flex-1 bg-transparent">

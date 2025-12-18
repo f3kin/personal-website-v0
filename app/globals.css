@@ -56,14 +56,19 @@
   html, body {
     min-height: 100%;
     background-color: hsl(var(--background));
-    background-image: linear-gradient(
-      to bottom,
-      #EEF3FC 0%,
-      #EEF3FC 8%,
-      hsl(var(--primary) / 0.10) 15%,
-      hsl(var(--secondary) / 0.05) 30%,
-      hsl(var(--background)) 100%
-    );
+    background-image: 
+      linear-gradient(
+        to bottom,
+        hsl(var(--background)) 0%,
+        hsl(var(--background)) 5%,
+        transparent 10%,
+        transparent 90%,
+        hsl(var(--background)) 95%,
+        hsl(var(--background)) 100%
+      ),
+      radial-gradient(ellipse at 20% 30%, hsl(var(--primary) / 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 70%, hsl(var(--secondary) / 0.12) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, hsl(var(--primary) / 0.08) 0%, transparent 70%);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
