@@ -22,7 +22,6 @@ export const metadata: Metadata = {
   metadataBase: new URL(LINKS.site.base),
   title: "Finlay Ekins",
   icons: { icon: "/favicon.png" },
-  themeColor: "#0f172a",
   openGraph: {
     title: "Finlay Ekins",
     description: "a personal website",
@@ -40,6 +39,7 @@ export const viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
+  themeColor: "#0f172a",
 } as const
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
