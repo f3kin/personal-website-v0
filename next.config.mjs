@@ -14,6 +14,14 @@ const nextConfig = {
       { protocol: 'https', hostname: 'images.unsplash.com' },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/resume',
+        destination: '/_resume.pdf',
+      },
+    ];
+  },
 }
 
 export default nextConfig
