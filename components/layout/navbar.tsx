@@ -52,9 +52,9 @@ export default function Navbar() {
               )}
             </Link>
           ))}
-          <div className="ml-2">
+          {/* <div className="ml-2">
             <ModeToggle />
-          </div>
+          </div> */}
         </nav>
       </div>
     </header>
